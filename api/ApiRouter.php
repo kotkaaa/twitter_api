@@ -8,7 +8,8 @@
 
 namespace TwiterApi;
 
-use \TwiterApi\Error;
+use \TwiterApi\Error,
+    TwiterApi\Request;
 /**
  * Description of Router
  *
@@ -25,7 +26,8 @@ class Router {
     }
 
     private function setMethod() {
-        $this->method = reset(explode("/", \TwiterApi\Request::uri()));
+        $uri = explode("/", \TwiterApi\Request::uri());
+        $this->method = $uri[1];
     }
     
     private function setParams() {
@@ -41,7 +43,9 @@ class Router {
     }
     
     public function getParam(string $key) : string {
-        return $this->params[$key];
+        if (!isset($this->params[$key])) {
+            \TwiterApi\Error::msg(3);
+        } return $this->params[$key];
     }
 }
 

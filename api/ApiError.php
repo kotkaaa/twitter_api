@@ -22,13 +22,15 @@ class Error {
     const MSG_PARAMS     = "Missing parameter";
     const MSG_METHOD     = "Unkown api method";
     const MSG_ACCESS     = "Access denied";
+    const MSG_NOT_FOUND  = "User not found";
     
-    protected $errors = [
+    static $errors = [
         1 => self::MSG_CONNECTION, // ошибка соединения
         2 => self::MSG_INTERNAL, // внутренняя ошибка
         3 => self::MSG_PARAMS, // отсутствует необходимый параметр
-        3 => self::MSG_METHOD, // неизвестный метод
-        3 => self::MSG_ACCESS, // ошибка доступа
+        4 => self::MSG_METHOD, // неизвестный метод
+        5 => self::MSG_ACCESS, // ошибка доступа
+        6 => self::MSG_NOT_FOUND, // ошибка доступа
     ];
     
     public static function msg(int $code) {

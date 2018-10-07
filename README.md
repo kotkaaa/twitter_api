@@ -1,23 +1,26 @@
-Dear John!
-I developed this Api for you. Now you can read the latest tweets by Elon Musk, Donald Trump and other Twitter celebrities in real-time.
+<p>Dear John!<br/>
+I developed this Api for you. Now you can read the latest tweets by Elon Musk, Donald J. Trump and other Twitter celebrities in real-time.<br/>
+Api was wroten on pure PHP w/o any frameworks.</p>
 
-To use this Api you must run the installer using Cli:\n
-$ php {DOCUMENT_ROOT}/private/install.php
+<p>To use this Api you must run the installer using Cli:</p>
+<code>$ php {DOCUMENT_ROOT}/cli/install.php</code>
 
-Or do a manual installation:\n
-mysql -u username -p\n
-CREATE DATABASE dbname;\n
-USE dbname;\n
-CREATE TABLE users (id int(11) unsigned not null auto_increment, name varchar(32) not null, constraint pk_example primary key (id));\n
-
-System requirements:\n
-Apache 2.X\n
-PHP 7.X\n
-MySQL 5.6\n
-PDO
-
-If you have troubles using this Api or found any bugs - tell me about this\n
-Enjoy!
-
-Regards, Alex\n
-Software developer
+<p>Or do a manual installation:</p>
+<code>mysql -u username -p password<br/>
+CREATE DATABASE api_test;<br/>
+USE api_test;<br/>
+CREATE TABLE users (id int(11) unsigned not null auto_increment, screen_name varchar(32) not null, name varchar(64) not null, primary key (id), unique key udx_name (screen_name));</code>
+<br/><br/>
+<p>System requirements:</p>
+<ul>
+    <li>Apache 2.4</li>
+    <li>PHP 7.X</li>
+    <li>MySQL 5.6</li>
+</ul>
+<br/>
+<p>If you have troubles using this Api or found any bugs - tell me about this.</p>
+<p>Enjoy!</p>
+<br/><br/>
+<p>
+Regards, Alex<br/>
+Software developer</p>

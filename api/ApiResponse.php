@@ -17,6 +17,7 @@ class Response {
     //put your code here
     public static function respond($data) {
         header('Content-Type: application/json');
-        exit(json_encode($data));
+        echo(json_encode($data));
+        exit;
     }
 }

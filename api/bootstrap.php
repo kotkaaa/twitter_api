@@ -5,11 +5,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+session_start();
 
 require 'Api.php';
-require 'ApiConfig.php';
+require 'ApiRouter.php';
 require 'ApiConnection.php';
-require 'ApiError.php';
 require 'ApiResponse.php';
+require 'ApiValidator.php';
+require 'ApiError.php';
+require 'ApiTweet.php';
 
 $Api = \TwiterApi\Api::createInstance();
