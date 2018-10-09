@@ -8,8 +8,7 @@
 
 namespace TwiterApi;
 
-use \TwiterApi\Error,
-    TwiterApi\Request;
+use \TwiterApi\Error;
 /**
  * Description of Router
  *
